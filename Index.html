@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>សម្រាប់ Nary</title>
+    <style>
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0;
+            font-family: 'Khmer OS Battambang', sans-serif; 
+            background-color: #fff0f5; 
+        }
+        .container { 
+            text-align: center; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 30px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+        h1 { color: #d63384; font-size: 24px; margin-bottom: 30px; }
+        img { max-width: 100%; height: auto; border-radius: 15px; margin-bottom: 20px; }
+        .buttons { position: relative; height: 60px; width: 100%; display: flex; justify-content: center; gap: 20px; }
+        button { 
+            padding: 12px 25px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            border-radius: 15px; 
+            border: none; 
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        #yesBtn { background-color: #ff4d6d; color: white; }
+        #noBtn { background-color: #343a40; color: white; position: absolute; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTZ4bnh1NmIxcmx0cnhncmgxNmh5Z2R2NDV5bHNxYjltNmEwdzh3ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VbnUQpnihPSIgIXuZv/giphy.gif" alt="Cute Cat GIF">
+        
+        <h1>Nary ត្រូវគ្នាវិញបានអត់? 😼</h1>
+        
+        <div class="buttons">
+            <button id="yesBtn" onclick="accept()">ត្រូវគ្នាវិញក៏បាន😼</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">យើងមិនខ្ចីត្រូវ🖕🏻</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            const x = Math.random() * (window.innerWidth - 120);
+            const y = Math.random() * (window.innerHeight - 100);
+            const btn = document.getElementById('noBtn');
+            btn.style.position = 'fixed';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+
+        function accept() {
+            alert("យេ៎ ទីបំផុតយើងត្រូវគ្នវិញហើយ 🥰💖");
+            // ប្តូរ Username Messenger របស់អ្នកនៅទីនេះ
+            window.location.href = "https://m.me/yourusername"; 
+        }
+    </script>
+</body>
+</html>
